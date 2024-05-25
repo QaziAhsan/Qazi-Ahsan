@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function quickView() {
   document.querySelectorAll('.quick-view').forEach(function (element) {
     element.addEventListener('click', function () {
+      console.log("clicked");
       if (!document.getElementById('quick-view')) {
         var div = document.createElement('div');
         div.id = 'quick-view';
