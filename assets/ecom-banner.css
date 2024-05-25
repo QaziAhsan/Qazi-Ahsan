@@ -11,7 +11,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    max-width: 500px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -20,4 +20,14 @@
     z-index: 1;
     padding: 15px;
     padding-left: 50px;
+}
+.banner__content h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+.banner__content p {
+    font-size: 20px;
+    line-height: normal;
 }
