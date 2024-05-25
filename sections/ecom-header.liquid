@@ -6,29 +6,31 @@
 
 <header class="ecom-header">
   <div class="page-width">
-    <div class="header-logo">
-      {{
-        settings.logo
-        | image_url: width: 600
-        | image_tag:
-          class: 'header__heading-logo motion-reduce',
-          widths: widths,
-          height: logo_height,
-          width: settings.logo_width,
-          alt: logo_alt,
-          sizes: sizes,
-          preload: true
-      }}
-    </div>
-    {% if header_title != blank %}
-    <div class="header-title">
-      <h5>{{ header_title }}</h5>
-    </div>
+    <div class="ecom-header-row">
+      <div class="header-logo">
+        {{
+          settings.logo
+          | image_url: width: 600
+          | image_tag:
+            class: 'header__heading-logo motion-reduce',
+            widths: widths,
+            height: logo_height,
+            width: settings.logo_width,
+            alt: logo_alt,
+            sizes: sizes,
+            preload: true
+        }}
+      </div>
+      {% if header_title != blank %}
+        <div class="header-title">
+          <h5>{{ header_title }}</h5>
+        </div>
       {% endif %}
-    <div class="header-right">
-      {% if header_btn_text != blank %}
-      <a href="{{ header_btn_url }}" class="header-btn">{{ header_btn_text }}</a>
+      <div class="header-right">
+        {% if header_btn_text != blank %}
+          <a href="{{ header_btn_url }}" class="header-btn">{{ header_btn_text }}</a>
         {% endif %}
+      </div>
     </div>
   </div>
 </header>
