@@ -27,16 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
         `).join('');
 
         document.getElementById('quick-view-content-inner').innerHTML = `
-          <div class="quick-view-image">
+        <div class="quick-view-top">
+           <div class="quick-view-image">
             <img src="${product.images[0]}" alt="${product.title}">
           </div>
-          <div class="quick-view-details">
-            <h2>${product.title}</h2>
-            <p>${product.description}</p>
-            ${optionsHTML}
+          <div class="quick-view-content">
+            <h3>${product.title}</h3>
             <p>${formatMoney(product.variants[0].price)}</p>
-            <button class="add-to-cart-btn" data-product-handle="${product.handle}">Add to Cart</button>
+            <p>${product.description}</p>
           </div>
+        </div>
+          <div class="quick-view-variants">
+            ${optionsHTML}
+          </div>
+           <button class="button add-to-cart-btn" data-product-handle="${product.handle}">Add to Cart</button>
         `;
         document.getElementById('quick-view-modal').style.display = 'block';
 
