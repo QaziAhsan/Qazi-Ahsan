@@ -1,32 +1,71 @@
+{% liquid
+  assign header_title = section.settings.header_title
+  assign header_btn_text = section.settings.header_btn_text
+  assign header_btn_url = section.settings.header_btn_url
+%}
+
 <header class="ecom-header">
-      {{ settings.logo | image_url: width: 600 | image_tag:
-                  class: 'header__heading-logo motion-reduce',
-                  widths: widths,
-                  height: logo_height,
-                  width: settings.logo_width,
-                  alt: logo_alt,
-                  sizes: sizes,
-                  preload: true
-                }}
+  <div class="page-width">
+    <div class="header-logo">
+      {{
+        settings.logo
+        | image_url: width: 600
+        | image_tag:
+          class: 'header__heading-logo motion-reduce',
+          widths: widths,
+          height: logo_height,
+          width: settings.logo_width,
+          alt: logo_alt,
+          sizes: sizes,
+          preload: true
+      }}
+    </div>
+    {% if header_title != blank %}
+    <div class="header-title">
+      <h5>{{ header_title }}</h5>
+    </div>
+      {% endif %}
+    <div class="header-right">
+      {% if header_btn_text != blank %}
+      <a href="{{ header_btn_url }}" class="header-btn">{{ header_btn_text }}</a>
+        {% endif %}
+    </div>
+  </div>
 </header>
 
 {% schema %}
-  {
-    "name": "Ecom Header",
-      "class": "section-header",
-      "enabled_on": {
-    "groups": ["header"]
-  },
-    "settings": [],
-      "blocks": [
+{
+  "name": "Ecom Header",
+    "class": "section-header",
+    "enabled_on": {
+  "groups": ["header"]
+},
+  "settings": [
     {
-      "type": "@app"
+        "type": "text",
+        "id": "header_title",
+      "label": "Header Title"
+    },
+      {
+        "type": "text",
+        "id": "header_btn_text",
+      "label": "Header Button Text"
+    },
+    {
+        "type": "url",
+        "id": "header_btn_url",
+      "label": "Header Button Url"
     }
   ],
-    "presets": [
-      {
-        "name": "Ecom Header"
-      }
-    ]
+    "blocks": [
+  {
+    "type": "@app"
   }
+],
+  "presets": [
+    {
+      "name": "Ecom Header"
+    }
+  ]
+}
 {% endschema %}
