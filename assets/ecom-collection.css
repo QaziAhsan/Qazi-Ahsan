@@ -1,10 +1,11 @@
 .ecom-collection-grid {
     display: flex;
     flex-wrap: wrap;
+      justify-content: center;
     gap: 15px;
 }
 .ecom-collection-grid-item {
-    width: calc(100% / 3);
+    width: calc((100% - 35px) / 3);
 }
 .ecom-collection-grid-item img {
     width: 100%;
