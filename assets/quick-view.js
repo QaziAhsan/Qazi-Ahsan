@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => response.json())
     .then(data => {
-      alert('Product added to cart!');
       document.getElementById('quick-view-modal').style.display = 'none';
+      window.location.href= "/cart";
     })
     .catch(error => {
       console.error('Error:', error);
