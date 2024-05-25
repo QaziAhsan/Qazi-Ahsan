@@ -48,6 +48,9 @@
     "ecom_header_4n9Wyr": {
       "type": "ecom-header",
       "settings": {
+        "header_title": "Find the ideal gift for your loved ones.",
+        "header_btn_text": "choose gift",
+        "header_btn_url": "#"
       }
     }
   },
