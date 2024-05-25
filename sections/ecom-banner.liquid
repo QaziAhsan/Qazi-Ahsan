@@ -1,20 +1,30 @@
 {{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
 
 <div class="ecom-banner-wrapper">
-<div class="banner__content ">
-
+  <div class="ecom-banner-media">
+    <img src="" class="banner-img" alt="Banner Image">
+  </div>
+  <div class="banner__content ">
+    <h1>The Gift Guide</h1>
+    <p>
+      Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to
+      delight your loved ones this holiday season.
+    </p>
+    <a href="#" class="btn ecom-btn">Shop Now</a>
+  </div>
+  <div class="ecom-banner-bottom-bar">
+    <p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>
+  </div>
 </div>
-</div>
-
 
 {% schema %}
-  {
-    "name": "Ecom Banner",
-    "settings": [],
-    "presets": [
-      {
-        "name": "Ecom Banner"
-      }
-    ]
-  }
+{
+  "name": "Ecom Banner",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Ecom Banner"
+    }
+  ]
+}
 {% endschema %}
