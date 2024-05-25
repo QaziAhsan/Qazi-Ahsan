@@ -4,7 +4,7 @@
   assign banner_img = section.settings.banner_image
   assign heading = section.settings.heading
   assign description = section.settings.description
-  assign bottom-bar-text = section.settings.bottom-bar-text
+  assign bottom-bar-text = section.settings['bottom-bar-text']
   assign button_text = section.settings.button_text
   assign btn_link = section.settings.btn_link
 %}
@@ -14,15 +14,23 @@
     <img src="{{ banner_img | img_url: "master" }}" class="banner-img" alt="Banner Image">
   </div>
   <div class="banner__content ">
-    <h1>{{ heading }}</h1>
-    <p>
-     {{ description }}
-    </p>
-    <a href="{{ btn_link }}" class="btn ecom-btn">{{ button_text }}</a>
+    {% if heading != blank %}
+      <h1>{{ heading }}</h1>
+    {% endif %}
+    {% if description != blank %}
+      <p>
+        {{ description }}
+      </p>
+    {% endif %}
+    {% if button_text != blank %}
+      <a href="{{ btn_link }}" class="btn ecom-btn">{{ button_text }}</a>
+    {% endif %}
   </div>
-  <div class="ecom-banner-bottom-bar">
-    <p>{{ bottom-bar-text }}</p>
-  </div>
+  {% if bottom-bar-text != blank %}
+    <div class="ecom-banner-bottom-bar">
+      <p>{{ bottom-bar-text }}</p>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
