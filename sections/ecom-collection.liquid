@@ -2,8 +2,9 @@
   <div class="page-width">
     <div class="ecom-collection-grid">
       {% for block in section.blocks %}
+        {% assign product = block.settings.product %}
             <div class="ecom-collection-grid-item">
-              <h3>{{ block.settings.product }}</h3>
+              <h3>{{ product.title }}</h3>
             </div>
       {% endfor %}
     </div>
