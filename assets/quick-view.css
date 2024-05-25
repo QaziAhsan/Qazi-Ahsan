@@ -38,12 +38,8 @@
 .quick-view-top {
     display: flex;
     align-items: flex-end;
+  gap: 10px;
 }
-.quick-view-top {
-    display: flex;
-    align-items: flex-end;
-}
-
 .quick-view-content h3 {
     font-size: 16px;
     margin: 0;
