@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listener for Quick View buttons
   document.querySelectorAll('.quick-view-btn').forEach(button => {
     button.addEventListener('click', function() {
+      console.log("clicked");
       const productHandle = this.getAttribute('data-product-handle');
       fetchProductData(productHandle);
     });
