@@ -52,3 +52,15 @@
     font-size: 14px;
     line-height: normal;
 }
+.quick-view-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.quick-view-image {
+    height: 140px;
+   width: 40%;
+}
+.quick-view-content-inner {
+    width: 60%;
+}
