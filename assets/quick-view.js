@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="quick-view-content-inner">
             <h3>${product.title}</h3>
-            <p>${formatMoney(product.variants[0].price)}</p>
+            <p class="quick-view-price">${formatMoney(product.variants[0].price)}</p>
             <p>${product.description}</p>
           </div>
         </div>
