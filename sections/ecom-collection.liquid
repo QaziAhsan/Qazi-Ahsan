@@ -2,38 +2,35 @@
   <div class="page-width">
     <div class="ecom-collection-grid">
       {% for block in section.blocks %}
-         {%- case block.type -%}
-          {%- when 'product' -%}
-      <div class="ecom-collection-grid-item">
-          <h3>{{ product.title }}</h3>
-      </div>
-           {% endcase %}
-        {% endfor %}
+            <div class="ecom-collection-grid-item">
+              <h3>{{ block.settings.product }}</h3>
+            </div>
+      {% endfor %}
     </div>
   </div>
 </div>
 
 {% schema %}
+{
+  "name": "Ecom Collection",
+  "settings": [],
+  "blocks": [
   {
-    "name": "Ecom Collection",
-    "settings": [],
-    "blocks": [
-    {
-      "type": "product",
-      "name": "Product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Select Product"
-        }
-      ]
-    }
-    ],
-    "presets": [
+    "type": "product",
+    "name": "Product",
+    "settings": [
       {
-        "name": "Ecom Collection"
+        "type": "product",
+        "id": "product",
+        "label": "Select Product"
       }
     ]
   }
+  ],
+  "presets": [
+    {
+      "name": "Ecom Collection"
+    }
+  ]
+}
 {% endschema %}
