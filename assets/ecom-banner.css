@@ -12,6 +12,7 @@
 .ecom-banner-wrapper {
     position: relative;
     height: 80vh;
+  overflow: hidden;
 }
 .banner__content {
     position: absolute;
