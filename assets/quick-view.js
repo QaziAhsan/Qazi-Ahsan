@@ -113,16 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isNaN(number) || number == null) {
         return 0;
       }
-
       number = (number / 1).toFixed(precision);
-
       const parts = number.split(".");
       const dollarsAmount = parts[0].replace(
         /(\d)(?=(\d\d\d)+(?!\d))/g,
         "$1" + thousands
       );
       const centsAmount = parts[1] ? decimal + parts[1] : "";
-
       return dollarsAmount + centsAmount;
     }
 
