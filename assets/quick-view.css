@@ -31,3 +31,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+.quick-view-image img {
+    width: 100%;
+    object-fit: cover;
+}
