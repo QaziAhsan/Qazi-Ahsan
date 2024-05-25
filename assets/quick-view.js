@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
            <div class="quick-view-image">
             <img src="${product.images[0]}" alt="${product.title}">
           </div>
-          <div class="quick-view-content">
+          <div class="quick-view-content-inner">
             <h3>${product.title}</h3>
             <p>${formatMoney(product.variants[0].price)}</p>
             <p>${product.description}</p>
