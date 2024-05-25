@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="quick-view-details">
             <h2>${product.title}</h2>
+            <p>${product.price}</p>
             <p>${product.description}</p>
             <button class="add-to-cart-btn" data-product-id="${product.variants[0].id}">Add to Cart</button>
           </div>
