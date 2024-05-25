@@ -10,10 +10,11 @@
         <div class="ecom-collection-grid-item" id="{{ product.id }}">
           <div class="ecom-grid-media">
           <img src="{{ product.featured_media | image_url: width: 533 }}" class="banner-img" alt="Banner Image">
-            <button class="quickview-btn">
-<img src="https://cdn.shopify.com/s/files/1/0879/2234/4236/files/plus.png?v=1716650184" alt="plus-icon"/>
-            </button>
-            <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
+            <div class="quick-view-button">
+              <a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">
+                  <img src="https://cdn.shopify.com/s/files/1/0879/2234/4236/files/plus.png?v=1716650184" alt="plus-icon"/>
+              </a>
+            </div>
           </div>
         </div>
       {% endfor %}
