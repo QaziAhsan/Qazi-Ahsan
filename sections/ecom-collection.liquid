@@ -8,7 +8,7 @@
     <div class="ecom-collection-grid">
       {% for block in section.blocks %}
         {% assign product = block.settings.product %}
-        <div class="ecom-collection-grid-item">
+        <div class="ecom-collection-grid-item" id="{{ product.id }}">
           <div class="ecom-grid-media">
           <img src="{{ product.featured_media | image_url: width: 533 }}" class="banner-img" alt="Banner Image">
             <button class="quickview-btn">
