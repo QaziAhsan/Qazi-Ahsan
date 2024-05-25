@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2>${product.title}</h2>
             <p>${product.description}</p>
             ${optionsHTML}
-            <p>${product.price)}</p>
+            <p>${product.price}</p>
             <button class="add-to-cart-btn" data-product-handle="${product.handle}">Add to Cart</button>
           </div>
         `;
