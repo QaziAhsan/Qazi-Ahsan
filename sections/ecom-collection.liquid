@@ -2,9 +2,12 @@
   <div class="page-width">
     <div class="ecom-collection-grid">
       {% for block in section.blocks %}
+         {%- case block.type -%}
+          {%- when 'product' -%}
       <div class="ecom-collection-grid-item">
-          <h3>{{ block.product.title }}</h3>
+          <h3>{{ product.title }}</h3>
       </div>
+           {% endcase %}
         {% endfor %}
     </div>
   </div>
