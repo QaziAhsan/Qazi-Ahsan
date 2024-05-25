@@ -25,11 +25,39 @@
           "settings": {
             "product": "blue-silk-tuxedo"
           }
+        },
+        "product_gGntbJ": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt"
+          }
+        },
+        "product_knqeWh": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket"
+          }
+        },
+        "product_nDWayU": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top"
+          }
+        },
+        "product_yqt4Jp": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top"
+          }
         }
       },
       "block_order": [
         "product_Ai9Hwb",
-        "product_k7M37X"
+        "product_k7M37X",
+        "product_gGntbJ",
+        "product_knqeWh",
+        "product_nDWayU",
+        "product_yqt4Jp"
       ],
       "settings": {
       }
