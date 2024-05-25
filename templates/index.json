@@ -11,6 +11,29 @@
         "btn_link": "#"
       }
     },
+    "ecom_collection_XNbgV6": {
+      "type": "ecom-collection",
+      "blocks": {
+        "product_Ai9Hwb": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag"
+          }
+        },
+        "product_k7M37X": {
+          "type": "product",
+          "settings": {
+            "product": "blue-silk-tuxedo"
+          }
+        }
+      },
+      "block_order": [
+        "product_Ai9Hwb",
+        "product_k7M37X"
+      ],
+      "settings": {
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -42,6 +65,7 @@
   },
   "order": [
     "ecom_banner_ngfGQn",
+    "ecom_collection_XNbgV6",
     "featured_collection"
   ]
 }
