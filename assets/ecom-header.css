@@ -1,3 +1,7 @@
+.header-logo {
+    display: flex;
+    align-items: center;
+}
 .ecom-header {
     background: #F5F5F5;
 }
