@@ -10,7 +10,7 @@
 .banner__content {
     position: absolute;
     left: 0;
-    bottom: 0;
+     bottom: 70px;
     max-width: 550px;
     display: flex;
     flex-direction: column;
