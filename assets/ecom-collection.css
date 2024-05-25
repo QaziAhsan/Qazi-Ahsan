@@ -9,3 +9,7 @@
 .ecom-collection-grid-item img {
     width: 100%;
 }
+.ecom-grid-media {
+    overflow: hidden;
+    height: 100%;
+}
