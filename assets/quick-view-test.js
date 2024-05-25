@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Fetch product data and display it in the modal
   function fetchProductData(handle) {
+     document.getElementById('quick-view-modal').style.display = 'block';
     fetch(`/products/${handle}.js`)
       .then(response => response.json())
       .then(product => {
