@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Fetch the Soft Winter Jacket variant ID
+  function fetchSoftWinterJacketVariantId() {
+    fetch(`/products/${SOFT_WINTER_JACKET_HANDLE}.js`)
+      .then(response => response.json())
+      .then(product => {
+        // Assuming the first variant is the one we want to add
+        softWinterJacketVariantId = product.variants[0].id;
+      });
+  }
+
+  fetchSoftWinterJacketVariantId();
+  
   // Close Quick View modal
   document
     .querySelector(".close-quick-view")
@@ -77,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+
   // Add product to cart
   function addToCart(variantId, quantity) {
     fetch("/cart/add.js", {
@@ -92,12 +105,46 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json())
       .then((data) => {
-        document.getElementById("quick-view-modal").style.display = "none";
+         // Check if the selected options are Black and Medium
+      if (selectedOptions.includes('Black') && selectedOptions.includes('Medium')) {
+        // Add Soft Winter Jacket to the cart
+        if (softWinterJacketVariantId) {
+          addSoftWinterJacketToCart();
+             document.getElementById("quick-view-modal").style.display = "none";
         window.location.href = "/cart";
+        }
+      } else {
+          document.getElementById("quick-view-modal").style.display = "none";
+        window.location.href = "/cart";
+      }
+   
       })
       .catch((error) => {
         console.error("Error:", error);
       });
+  }
+
+// Add Soft Winter Jacket to cart
+  function addSoftWinterJacketToCart() {
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        id: softWinterJacketVariantId,
+        quantity: 1
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Product and Soft Winter Jacket added to cart!');
+      document.getElementById('quick-view-modal').style.display = 'none';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   }
 
   // Custom money formatting function
