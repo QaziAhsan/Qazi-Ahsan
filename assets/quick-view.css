@@ -61,3 +61,18 @@
 .quick-view-content-inner {
     width: 60%;
 }
+.product-option label {
+    display: block;
+}
+
+.product-option select {
+    width: 100%;
+    padding: 10px;
+}
+
+.product-option {
+    margin-bottom: 15px;
+}
+.button.add-to-cart-btn {
+    width: 100%;
+}
