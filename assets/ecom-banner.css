@@ -3,3 +3,17 @@
     top: 0;
     left: 0;
 }
+.ecom-banner-wrapper {
+    position: relative;
+    height: 80vh;
+}
+.banner__content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
