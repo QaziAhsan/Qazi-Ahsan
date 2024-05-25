@@ -1,3 +1,6 @@
+.ecom-header {
+    background: #F5F5F5;
+}
 .ecom-header-row {
     display: flex;
     justify-content: space-between;
