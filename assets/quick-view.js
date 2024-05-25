@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         // Check if the selected options are Black and Medium
-        if (selectedOptions.includes('Black') && selectedOptions.includes('Medium')) {
+        if (selectedOptions.includes('Black') && selectedOptions.includes('M')) {
           // Add Soft Winter Jacket to the cart
           if (softWinterJacketVariantId) {
             addSoftWinterJacketToCart();
