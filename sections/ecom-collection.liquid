@@ -1,9 +1,11 @@
 <div class="ecom-collection-wrapper">
   <div class="page-width">
     <div class="ecom-collection-grid">
+      {% for block in section.blocks %}
       <div class="ecom-collection-grid-item">
-
+          <h3>{{ block.product.title }}</h3>
       </div>
+        {% endfor %}
     </div>
   </div>
 </div>
