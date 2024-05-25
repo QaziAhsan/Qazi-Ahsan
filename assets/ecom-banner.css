@@ -16,4 +16,8 @@
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
+    background: white;
+    z-index: 1;
+    padding: 15px;
+    padding-left: 50px;
 }
