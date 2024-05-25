@@ -82,3 +82,7 @@ color: black;
 .button.add-to-cart-btn {
     width: 100%;
 }
+p.quick-view-price {
+    font-size: 16px;
+    font-weight: 600;
+}
