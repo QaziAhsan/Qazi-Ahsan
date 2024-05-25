@@ -1,3 +1,40 @@
+function formatMoney(cents, format = "${{amount}}") {
+  if (typeof cents == 'string') {
+    cents = cents.replace('.', '');
+  }
+
+  const value = (cents / 100).toFixed(2);
+  const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    if (isNaN(number) || number == null) {
+      return 0;
+    }
+
+    number = (number / 1).toFixed(precision);
+
+    const parts = number.split('.');
+    const dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
+    const centsAmount = parts[1] ? decimal + parts[1] : '';
+
+    return dollarsAmount + centsAmount;
+  }
+
+  switch (format.match(placeholderRegex)[1]) {
+    case 'amount':
+      return formatWithDelimiters(value, 2, ',', '.');
+    case 'amount_no_decimals':
+      return formatWithDelimiters(value, 0, ',', '.');
+    case 'amount_with_comma_separator':
+      return formatWithDelimiters(value, 2, '.', ',');
+    case 'amount_no_decimals_with_comma_separator':
+      return formatWithDelimiters(value, 0, '.', ',');
+  }
+
+  return value;
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Event listener for Quick View buttons
   document.querySelectorAll('.quick-view-btn').forEach(button => {
