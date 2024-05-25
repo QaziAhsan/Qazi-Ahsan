@@ -1,3 +1,5 @@
+{{ 'ecom-header.css' | asset_url | stylesheet_tag }}
+
 <div class="ecom-collection-wrapper">
   <div class="page-width">
     <div class="ecom-collection-heading">
@@ -7,8 +9,9 @@
       {% for block in section.blocks %}
         {% assign product = block.settings.product %}
         <div class="ecom-collection-grid-item">
+          <div class="ecom-grid-media">
           <img src="{{ product.featured_media | image_url: width: 533 }}" class="banner-img" alt="Banner Image">
-          <h3>{{ product.title }}</h3>
+          </div>
         </div>
       {% endfor %}
     </div>
