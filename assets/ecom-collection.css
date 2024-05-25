@@ -20,7 +20,7 @@
 .ecom-collection-wrapper {
   margin: 60px 0;
 }
-.quick-view-button {
+.quick-view-btn {
   position: absolute;
   left: 0;
   top: 0;
@@ -31,27 +31,27 @@
   width: 22px;
     height: 22px;
 }
-.ecom-collection-grid-item:nth-child(1) .quick-view-button {
+.ecom-collection-grid-item:nth-child(1) .quick-view-btn {
   left: 50%;
   top: 60%;
 }
-.ecom-collection-grid-item:nth-child(2) .quick-view-button {
+.ecom-collection-grid-item:nth-child(2) .quick-view-btn {
     left: 73%;
     top: 50%;
 }
-.ecom-collection-grid-item:nth-child(3) .quick-view-button {
+.ecom-collection-grid-item:nth-child(3) .quick-view-btn {
     left: 55%;
     top: 14%;
 }
-.ecom-collection-grid-item:nth-child(4) .quick-view-button {
+.ecom-collection-grid-item:nth-child(4) .quick-view-btn {
 left: 64%;
     top: 15%;
 }
-.ecom-collection-grid-item:nth-child(5) .quick-view-button {
+.ecom-collection-grid-item:nth-child(5) .quick-view-btn {
  left: 48%;
     top: 25%;
 }
-.ecom-collection-grid-item:nth-child(6) .quick-view-button {
+.ecom-collection-grid-item:nth-child(6) .quick-view-btn {
     left: 66%;
     top: 40%;
 }
