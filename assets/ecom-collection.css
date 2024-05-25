@@ -20,8 +20,7 @@
 .ecom-collection-wrapper {
   margin: 60px 0;
 }
-            <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
-. {
+.quick-view-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -32,27 +31,27 @@
   width: 22px;
     height: 22px;
 }
-.ecom-collection-grid-item:nth-child(1) .quickview-btn {
+.ecom-collection-grid-item:nth-child(1) .quick-view-button {
   left: 50%;
   top: 60%;
 }
-.ecom-collection-grid-item:nth-child(2) .quickview-btn {
+.ecom-collection-grid-item:nth-child(2) .quick-view-button {
     left: 73%;
     top: 50%;
 }
-.ecom-collection-grid-item:nth-child(3) .quickview-btn {
+.ecom-collection-grid-item:nth-child(3) .quick-view-button {
     left: 55%;
     top: 14%;
 }
-.ecom-collection-grid-item:nth-child(4) .quickview-btn {
+.ecom-collection-grid-item:nth-child(4) .quick-view-button {
 left: 64%;
     top: 15%;
 }
-.ecom-collection-grid-item:nth-child(5) .quickview-btn {
+.ecom-collection-grid-item:nth-child(5) .quick-view-button {
  left: 48%;
     top: 25%;
 }
-.ecom-collection-grid-item:nth-child(6) .quickview-btn {
+.ecom-collection-grid-item:nth-child(6) .quick-view-button {
     left: 66%;
     top: 40%;
 }
