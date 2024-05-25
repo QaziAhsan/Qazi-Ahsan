@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('quick-view-modal').style.display = 'block';
         
         // Add to cart functionality
-        document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
-          const productId = this.getAttribute('data-product-id');
-          addToCart(productId, 1);
-        });
+        // document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        //   const productId = this.getAttribute('data-product-id');
+        //   addToCart(productId, 1);
+        // });
       });
   }
 
