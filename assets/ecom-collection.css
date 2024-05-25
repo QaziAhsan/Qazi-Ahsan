@@ -28,28 +28,30 @@ button.quickview-btn {
   border: none;
   padding: 0;
   cursor: pointer;
+  width: 22px;
+    height: 22px;
 }
 .ecom-collection-grid-item:nth-child(1) .quickview-btn {
   left: 50%;
   top: 60%;
 }
 .ecom-collection-grid-item:nth-child(2) .quickview-btn {
-  left: 50%;
-  top: 60%;
+    left: 73%;
+    top: 50%;
 }
 .ecom-collection-grid-item:nth-child(3) .quickview-btn {
-  left: 50%;
-  top: 60%;
+    left: 55%;
+    top: 14%;
 }
 .ecom-collection-grid-item:nth-child(4) .quickview-btn {
-  left: 50%;
-  top: 60%;
+left: 64%;
+    top: 15%;
 }
 .ecom-collection-grid-item:nth-child(5) .quickview-btn {
-  left: 50%;
-  top: 60%;
+ left: 48%;
+    top: 25%;
 }
 .ecom-collection-grid-item:nth-child(6) .quickview-btn {
-  left: 50%;
-  top: 60%;
+    left: 66%;
+    top: 40%;
 }
