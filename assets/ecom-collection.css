@@ -20,7 +20,8 @@
 .ecom-collection-wrapper {
   margin: 60px 0;
 }
-button.quickview-btn {
+            <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
+. {
   position: absolute;
   left: 0;
   top: 0;
