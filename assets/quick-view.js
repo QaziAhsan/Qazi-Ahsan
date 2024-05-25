@@ -13,75 +13,49 @@ function quickView() {
     }
 
     var product_handle = $(this).data("handle");
-
     $("#quick-view").addClass(product_handle);
-
     jQuery.getJSON("/products/" + product_handle + ".js", function (product) {
       var title = product.title;
-
       var type = product.type;
-
       var price = 0;
-
       var original_price = 0;
-
       var desc = product.description;
-
       var images = product.images;
-
       var variants = product.variants;
-
       var options = product.options;
-
       var url = "/products/" + product_handle;
-
       $(".qv-product-title").text(title);
-
       $(".qv-product-type").text(type);
-
       $(".qv-product-description").html(desc);
-
       $(".view-product").attr("href", url);
-
       var imageCount = $(images).length;
-
       $(images).each(function (i, image) {
         if (i == imageCount - 1) {
           var image_embed = '<div><img src="' + image + '"></div>';
-
           image_embed = image_embed
             .replace(".jpg", "_800x.jpg")
             .replace(".png", "_800x.png");
-
           $(".qv-product-images").append(image_embed);
-
           $(".qv-product-images")
             .slick({
               dots: false,
-
               arrows: false,
-
               respondTo: "min",
-
               useTransform: false,
             })
             .css("opacity", "1");
         } else {
           image_embed = '<div><img src="' + image + '"></div>';
-
           image_embed = image_embed
             .replace(".jpg", "_800x.jpg")
             .replace(".png", "_800x.png");
-
           $(".qv-product-images").append(image_embed);
         }
       });
 
       $(options).each(function (i, option) {
         var opt = option.name;
-
         var selectClass = ".option." + opt.toLowerCase();
-
         $(".qv-product-options").append(
           '<div class="option-selection-' +
             opt.toLowerCase() +
@@ -104,19 +78,13 @@ function quickView() {
       $(product.variants).each(function (i, v) {
         if (v.inventory_quantity == 0) {
           $(".qv-add-button").prop("disabled", true).val("Sold Out");
-
           $(".qv-add-to-cart").hide();
-
           $(".qv-product-price").text("Sold Out").show();
-
           return true;
         } else {
           price = parseFloat(v.price / 100).toFixed(2);
-
           original_price = parseFloat(v.compare_at_price / 100).toFixed(2);
-
           $(".qv-product-price").text("$" + price);
-
           if (original_price > 0) {
             $(".qv-product-original-price")
               .text("$" + original_price)
@@ -124,13 +92,9 @@ function quickView() {
           } else {
             $(".qv-product-original-price").hide();
           }
-
           $("select.option-0").val(v.option1);
-
           $("select.option-1").val(v.option2);
-
           $("select.option-2").val(v.option3);
-
           return false;
         }
       });
