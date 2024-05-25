@@ -15,7 +15,16 @@
 .ecom-grid-media {
     overflow: hidden;
     height: 100%;
+    position: relative;
 }
 .ecom-collection-wrapper {
     margin: 60px 0;
+}
+button.quickview-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
