@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Fetch product data and display it in the modal
   function fetchProductData(handle) {
-     document.getElementById('quick-view-modal').style.display = 'block';
     fetch(`/products/${handle}.js`)
       .then(response => response.json())
       .then(product => {
@@ -32,11 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.getElementById('quick-view-modal').style.display = 'block';
         
-        // Add to cart functionality
-        document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
-          const productId = this.getAttribute('data-product-id');
-          addToCart(productId, 1);
-        });
+      
       });
   }
 
