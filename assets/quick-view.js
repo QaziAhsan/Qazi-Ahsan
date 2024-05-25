@@ -13,8 +13,7 @@ function quickView() {
       
        var product_handle = this.getAttribute('data-handle');
       var quickViewDiv = document.getElementById('quick-view');
-      quickViewDiv.className = product_handle;
-      
+      quickViewDiv.classList.add(product_handle);
       console.log("clicked");
     });
   });
