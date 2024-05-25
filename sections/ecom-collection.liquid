@@ -9,7 +9,8 @@
         {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
         
             <div class="ecom-collection-grid-item">
-                <img src="{{ product.media[1] | img_url: "master" }}" class="banner-img" alt="Banner Image">
+             
+                <img  src="{{ product.featured_media | image_url: width: 533 }}"class="banner-img" alt="Banner Image">
               <h3>{{ product.title }}</h3>
             </div>
       {% endfor %}
