@@ -1,0 +1,9 @@
+.ecom-collection-grid {
+    display: flex;
+}
+.ecom-collection-grid-item {
+    width: calc(100% / 3);
+}
+.ecom-collection-grid-item img {
+    width: 100%;
+}
