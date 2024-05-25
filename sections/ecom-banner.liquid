@@ -1,26 +1,65 @@
 {{ 'ecom-banner.css' | asset_url | stylesheet_tag }}
 
+{% liquid
+  assign banner_img = section.settings.banner_image
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign bottom-bar-text = section.settings.bottom-bar-text
+  assign button_text = section.settings.button_text
+  assign btn_link = section.settings.btn_link
+%}
+
 <div class="ecom-banner-wrapper">
   <div class="ecom-banner-media">
-    <img src="" class="banner-img" alt="Banner Image">
+    <img src="{{ banner_img | asset_url: "master" }}" class="banner-img" alt="Banner Image">
   </div>
   <div class="banner__content ">
-    <h1>The Gift Guide</h1>
+    <h1>{{ heading }}</h1>
     <p>
-      Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to
-      delight your loved ones this holiday season.
+     {{ description }}
     </p>
-    <a href="#" class="btn ecom-btn">Shop Now</a>
+    <a href="{{ btn_link }}" class="btn ecom-btn">{{ button_text }}</a>
   </div>
   <div class="ecom-banner-bottom-bar">
-    <p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>
+    <p>{{ bottom-bar-text }}</p>
   </div>
 </div>
 
 {% schema %}
 {
   "name": "Ecom Banner",
-  "settings": [],
+  "settings": [
+      {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+         "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+     {
+         "type": "text",
+      "id": "bottom-bar-text",
+      "label": "Bottom Bar Text"
+    },
+      {
+         "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+      {
+         "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
   "presets": [
     {
       "name": "Ecom Banner"
