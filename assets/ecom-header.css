@@ -16,6 +16,7 @@
 }
 
 .header-btn {
+  display: block;
     background: #FFF544;
     color: black;
     text-decoration: none;
