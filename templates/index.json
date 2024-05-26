@@ -4,6 +4,7 @@
       "type": "ecom-banner",
       "settings": {
         "banner_image": "shopify:\/\/shop_images\/banner.png",
+        "banner_image_mobile": "shopify:\/\/shop_images\/mobile-banner.png",
         "heading": "The Gift Guide",
         "description": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
         "bottom-bar-text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL",
