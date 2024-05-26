@@ -36,9 +36,11 @@
     background-color: #000;
     transition: .2s ease;
     transform: translateX(-100%);
+  opacity: 0;
 }
 .header-btn:hover:before{
   transform: translateX(0%);
+  opacity: 1;
 }
 .header-btn span {
     color: white;
