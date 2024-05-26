@@ -51,7 +51,9 @@ img.banner-img.mobile {
     background: #F5F5F5;
     padding: 5px;
 }
-
+.ecom-btn {
+    gap: 10px;
+}
 .ecom-banner-bottom-bar p {
     margin: 0;
 }
