@@ -46,6 +46,5 @@
     filter: contrast(10) invert(1);
 }
 .header-btn span {
-    color: white;
     position: relative;
 }
