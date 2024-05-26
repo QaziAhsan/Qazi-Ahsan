@@ -9,6 +9,9 @@
     width: 100%;
     object-fit: cover;
 }
+img.banner-img.mobile {
+    display: none;
+}
 .ecom-banner-wrapper {
     position: relative;
     height: 80vh;
@@ -29,7 +32,7 @@
     padding-left: 50px;
 }
 .banner__content h1 {
-    font-size: 70px;
+       font-size: clamp(30px,8vw,70px);
     font-weight: bold;
     margin: 0;
     line-height: 1;
@@ -51,4 +54,12 @@
 
 .ecom-banner-bottom-bar p {
     margin: 0;
+}
+@media(max-width:768px){
+  img.banner-img.mobile {
+    display: block;
+}
+  img.banner-img.desktop {
+    display: none;
+}
 }
