@@ -74,4 +74,10 @@ img.banner-img.mobile {
     align-items: center;
     padding: 15px 15px;
 }
+  .ecom-banner-wrapper {
+        padding-top: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
 }
