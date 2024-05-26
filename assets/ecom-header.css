@@ -42,8 +42,8 @@
   transform: translateX(0%);
   opacity: 1;
 }
-.header-btn:hover img{
-  
+.header-btn:hover img {
+    filter: contrast(10) invert(1);
 }
 .header-btn span {
     color: white;
