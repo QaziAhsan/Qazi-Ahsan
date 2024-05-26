@@ -35,6 +35,7 @@
 }
 .header-btn:hover:before{
     width: 100%;
+    transition: width 2s;
 }
 .header-btn span {
     color: white;
