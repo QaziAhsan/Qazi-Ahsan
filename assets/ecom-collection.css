@@ -55,3 +55,8 @@ left: 64%;
     left: 66%;
     top: 40%;
 }
+@media(max-width: 768px){
+  .ecom-collection-grid-item {
+    width: calc((100% - 35px) / 2);
+}
+}
