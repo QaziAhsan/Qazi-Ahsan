@@ -51,6 +51,6 @@
     align-items: center;
     gap: 12px;
 }
-.header-btn span {
-    position: relative;
+.header-btn:hover span{
+  color: white;
 }
