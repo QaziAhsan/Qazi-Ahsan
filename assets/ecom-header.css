@@ -42,6 +42,9 @@
   transform: translateX(0%);
   opacity: 1;
 }
+.header-btn:hover img{
+  
+}
 .header-btn span {
     color: white;
     position: relative;
