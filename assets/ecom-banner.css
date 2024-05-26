@@ -62,4 +62,16 @@ img.banner-img.mobile {
   img.banner-img.desktop {
     display: none;
 }
+  .ecom-banner-media{
+    position: unset;
+  }
+  .banner__content {
+    position: unset;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 15px 15px;
+}
 }
