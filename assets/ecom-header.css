@@ -31,6 +31,7 @@
     top: 0;
     height: 100%;
     background-color: black;
+  transition: .2s ease;
 }
 .header-btn:hover:before{
     width: 100%;
