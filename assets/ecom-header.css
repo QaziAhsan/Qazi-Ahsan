@@ -54,3 +54,8 @@
 .header-btn:hover span{
   color: white;
 }
+@media(max-width:768px){
+  .header-title h5 {
+    display: none;
+}
+}
