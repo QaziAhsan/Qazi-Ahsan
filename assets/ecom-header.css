@@ -36,3 +36,7 @@
 .header-btn:hover{
   
 }
+.header-btn span {
+    color: white;
+    position: relative;
+}
