@@ -2,6 +2,7 @@
 
 {% liquid
   assign banner_img = section.settings.banner_image
+  assign banner_image_mobile = section.settings.banner_image_mobile
   assign heading = section.settings.heading
   assign description = section.settings.description
   assign bottom-bar-text = section.settings['bottom-bar-text']
@@ -11,7 +12,8 @@
 
 <div class="ecom-banner-wrapper">
   <div class="ecom-banner-media">
-    <img src="{{ banner_img | img_url: "master" }}" class="banner-img" alt="Banner Image">
+    <img src="{{ banner_img | img_url: "master" }}" class="banner-img desktop" alt="Banner Image">
+    <img src="{{ banner_img | img_url: "master" }}" class="banner-img mobile" alt="Banner Image">
   </div>
   <div class="banner__content ">
     {% if heading != blank %}
@@ -41,6 +43,11 @@
       "type": "image_picker",
       "id": "banner_image",
       "label": "Banner Image"
+    },
+     {
+      "type": "image_picker",
+      "id": "banner_image_mobile",
+      "label": "Banner Image Mobile"
     },
     {
       "type": "text",
