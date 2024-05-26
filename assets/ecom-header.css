@@ -45,6 +45,9 @@
 .header-btn:hover img {
     filter: contrast(10) invert(1);
 }
+.header-btn:hover span{
+  color: white;
+}
 .header-btn span {
     position: relative;
 }
