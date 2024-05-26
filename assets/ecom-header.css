@@ -23,6 +23,7 @@
     text-transform: uppercase;
     font-size: 16px;
   position: relative;
+  overflow: hidden;
 }
 .header-btn:before{
     content: "";
