@@ -31,8 +31,13 @@
       <div class="header-right">
         {% if header_btn_text != blank %}
           <a href="{{ header_btn_url }}" class="header-btn">
-            {{ header_btn_text }}
-          <img src="https://cdn.shopify.com/s/files/1/0879/2234/4236/files/arrow-right.png?v=1716650184" alt="btn-arrow"/>
+            <span>
+              {{ header_btn_text }}
+              <img
+                src="https://cdn.shopify.com/s/files/1/0879/2234/4236/files/arrow-right.png?v=1716650184"
+                alt="btn-arrow"
+              >
+            </span>
           </a>
         {% endif %}
       </div>
